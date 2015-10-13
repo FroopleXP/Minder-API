@@ -1,11 +1,25 @@
 {
-  "name": "comp_sci",
-  "version": "0.0.1",
+  "name": "MINDER-API",
+  "version": "0.0.2",
   "description": "Server for Computer Science project",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "Connor Edwards",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "mysql": "^2.9.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FroopleXP/Minder-API.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FroopleXP/Minder-API/issues"
+  }
 }
