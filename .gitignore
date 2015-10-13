@@ -1,2 +1,4 @@
 /routes/mysql_conn.js
 routes/mysql_conn.js
+/node_modules
+node_modules
