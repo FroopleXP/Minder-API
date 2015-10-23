@@ -22,9 +22,12 @@ exports.get_info = function(req, res) {
 
 	// Getting the Username from the request
 	var username = req.params.username;
-	var classes = {};
-	var task_name = {};
-	var task_desc = {};
+
+	// Objects for response
+	var resp = {},
+		classes = {},
+		task_name = {},
+		task_desc = {};
 
 
 	// Getting info about the user
@@ -32,17 +35,25 @@ exports.get_info = function(req, res) {
 
 		if (result.length > 0) {
 
+			// Looping through data
 			for (i = 0; i < result.length; i++) {
-				classes[result[i].class_id] = result[i].class_name;
+				resp[i] = {
+					'class_name': result[i].class_name,
+					'task_name_': result[i].task_name,
+					'task_desc_': result[i].task_desc
+				}
 			}
 
 			res.json({
-				data: {
-					classes: classes
-				}
+				tasks: resp
 			});
 
-		}
+		} else {
+            res.json({
+                status: 'ok',
+                warning: 'No tasks to get!'
+            }); 
+        }
 
 	});
 
