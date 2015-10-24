@@ -1,5 +1,9 @@
 // Including MySQL connect script
-var db = require('./mysql_conn.js');
+try {
+	var db = require('./mysql_conn.js');
+} catch (err) {
+	console.log("Couldn't find MySQL config file!");
+}
 
 // Welcome export
 exports.welcome = function(req, res) {
