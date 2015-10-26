@@ -6,7 +6,7 @@ var conn = mysql.createConnection({
 	host: '45.55.245.98',
 	user: 'USERNAME',
 	password: 'PASSWORD',
-	database: 'minder',
+	database: 'DATABASE',
 	port: 3306
 });
 
