@@ -7,7 +7,7 @@ var express = require('express'),
 var views = require("./routes/users.js");
 
 // Variables for server config
-var port = 8089,
+var port = 8080,
 	api_v = 1,
 	req_to = "/api/v" + api_v + "/";
 
